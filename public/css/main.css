@@ -1,0 +1,587 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    background-color: #373737;
+    font-size: 1em;
+    line-height: 1.4;
+    overflow: hidden
+}
+
+html {
+    background-color: #f3f2ed;
+}
+
+.identifierTextMe {
+    color: #00cbc4; font-weight: bold
+}
+
+.identifierTextThem {
+    color: #ff8c00; font-weight: bold
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 0px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.submitButton {
+    float: right;
+    background-color: #ff8c00;
+    width: 64px;
+    height: 63px;
+    border-width: 0px;
+    border-color: #373737;
+    border-style: solid;
+    padding: 0px 0px 0px 0px;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-right: 0px;
+    border-radius: 13px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    -moz-border-radius: 13px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+}
+
+.inputText {
+    width: 74%;
+    outline-width: 0;
+    outline: 0;
+    height: 63px;
+    float: left;
+    overflow: hidden;
+    border-style: solid;
+    border-color: #373737;
+    border-width: 0px;
+    border-radius: 13px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    -moz-border-radius: 13px;
+    padding: 0px 7px 0px 7px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.welcomeTextBlack {
+    color: #4d4d4d
+}
+
+.welcomeTextOrange {
+    color: #ff8c00
+}
+
+.welcomeTextBlue {
+    color: #00cbc4;
+    font-weight: bold
+}
+
+#inputSection {
+    width: 100%;
+    background-color: #373737;
+    padding-top: 5px;
+    height: 67px;
+    position: absolute;
+    bottom: 0;
+}
+
+#chatLog {
+    overflow: auto;
+    background-color: #f3f2ed;
+    font-size: 1.1em;
+}
+
+#imgwrapper {
+    overflow: hidden;
+}
+
+.oldConvo {
+    color: #ccc
+}
+
+#welcome_text {
+    width: 100%;
+    margin-top: 8px
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg);
+    } to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    } to {
+        transform: rotate(360deg)
+    }
+}
+
+.loading {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration: 3.0s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-name: rotate;
+    animation-duration: 3.0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    width: 50px;
+    height: 50px;
+    max-width: 50px;
+    max-height: 50px
+}
+
+#image {
+    visibility: hidden;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#wrapper {
+    width: 100%;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto
+}
+
+#title {
+    width: 100%;
+    background-color: #373737;
+    position: relative;
+    display: block
+}
+
+#titleImg {
+    margin-left: 1%
+}
+
+#chatOutput {
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+#textwrapper {
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+
+
+    -ms-word-break: break-all;
+    word-break: break-all;
+
+    // Non standard for webkit
+    word-break: break-word;
+
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+}
+
+#ctlChat {
+    width: 100%;
+    background-color: #373737;
+    padding-bottom: 5px
+}
+
+.imageCentered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    -webkit-border-radius: 6px; /* Saf3+, Chrome */
+    border-radius: 6px; /* Opera 10.5, IE 9 */
+    /*-moz-border-radius: 30px; Disabled for FF1+ */
+}
+
+.imgwrapperContainer {
+    display: table;
+    background-color: #f3f2ed
+}
+
+.textwrapperContainer {
+    display: table;
+}
+
+.imgContainer {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.textContainer {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+#input_text{
+    background-color: #f3f2ed;
+    position: relative;
+    left: 0px;
+    margin-left: 4px;
+    -moz-box-shadow:    inset 0 0 2px #373737;
+    -webkit-box-shadow: inset 0 0 2px #373737;
+    box-shadow:         inset 0 0 2px #373737
+}
+#input_submit{
+    margin-right: 4px;
+    width: 76px;
+    -moz-box-shadow:    inset 0 0 2px #373737;
+    -webkit-box-shadow: inset 0 0 2px #373737;
+    box-shadow:         inset 0 0 2px #373737
+}
+
+@media all and (max-width: 420px) {
+}
+
+@media all and (orientation:landscape) {
+    #imgwrapper{
+        width: 48%;
+        min-width: 48%;
+        max-width: 48%;
+        float: right;
+        height: auto;
+        margin-right: 5px
+    }
+
+    .imgwrapperContainer {
+        -webkit-border-radius: 6px; /* Saf3+, Chrome */
+        border-radius: 6px; /* Opera 10.5, IE 9 */
+        /*-moz-border-radius: 30px; Disabled for FF1+ */
+        -moz-box-shadow:    inset 0 0 2px #373737;
+    	-webkit-box-shadow: inset 0 0 2px #373737;
+    	box-shadow:         inset 0 0 2px #373737
+    }
+    
+    #chatLog {
+    	-moz-box-shadow:    inset 0 0 2px #373737;
+    	-webkit-box-shadow: inset 0 0 2px #373737;
+    	box-shadow:         inset 0 0 2px #373737
+    }
+
+    #inputsection{width: 100%}
+    #titleimg{max-width: 21%}
+    #innerImgWrapper{width: 100%; height: auto; float: none;}
+    .loading {
+        max-width: 50px
+    }
+    #chatLog {
+        -webkit-border-radius: 6px; /* Saf3+, Chrome */
+        border-radius: 6px; /* Opera 10.5, IE 9 */
+        margin-left: 5px
+    }
+}
+
+@media all and (orientation:portrait) {
+    #imgwrapper{width: 100%; height: auto; float: none}
+    #inputSection{width: 100%; background-color: #f3f2ed !important}
+    #titleimg{max-width: 53%}
+    #input_text{margin-left: 2px}
+    #input_submit{margin-right: 2px}
+    #input_submit{width: 64px}
+    #chatLog{width: 100%}
+    #image{height: 100%; width: auto}
+    #innerImgWrapper{width: auto; height: 50%; float: none}
+    .inputText {
+        border-width: 1px;
+    }
+    .submitButton {
+        border-width: 1px;
+    }
+    .loading {
+        max-width: 50px
+    }
+
+    #chatLog {
+        -webkit-border-radius: 0px; /* Saf3+, Chrome */
+        border-radius: 0px; /* Opera 10.5, IE 9 */
+    }
+
+    body {
+        background-color: #f3f2ed
+    }
+
+    #ctlChat {
+        background-color: #f3f2ed
+    }
+
+    .imgwrapperContainer {
+        display: table;
+        background-color: #373737
+    }
+}
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

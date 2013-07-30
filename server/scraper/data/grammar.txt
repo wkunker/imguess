@@ -1,0 +1,15 @@
+S -> NP VP | BEG NP VP
+S -> NP VP BEG | BEG NP VP BEG
+
+BEG -> adverb-sentence_modifier
+
+NP -> possessive-pronoun N | DETERMINER ADJ N | nominative-pronoun
+DObj -> possessive-pronoun N | DETERMINER N | pronoun
+N -> ADJ noun | noun
+
+# VP -> verb-intransitive | verb-transitive DObj | verb-ditransitive DObj DObj
+VP -> verb-intransitive | verb-transitive DObj | verb-linking DObj
+
+DETERMINER -> determiner | indefinite-article
+
+ADJ -> ADJ adjective | adjective

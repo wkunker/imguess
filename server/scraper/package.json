@@ -1,0 +1,9 @@
+{
+    "name": "imgrelay",
+    "description": "imguess image relay using json files",
+    "dependencies": {
+        "restify": "",
+        "request": "",
+        "jquery": ""
+    }
+}

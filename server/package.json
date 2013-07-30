@@ -1,0 +1,9 @@
+{
+    "name": "imguess.com",
+    "description": "A random chat service where the goal is to guess the picture (or not).",
+    "dependencies": {
+        "restify": "",
+        "request": "",
+        "node-uuid": ""
+    }
+}
